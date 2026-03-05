@@ -1,0 +1,1405 @@
+:root {
+    --main-blue: #0059BD;
+    --accent-orange: #ff8c00;
+    --bg-light: #f4f4f4;
+}
+
+body {
+    background-color: var(--bg-light);
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 100px;
+    margin: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--main-blue);
+    font-weight: 500;
+}
+
+.hero-container {
+    padding: 40px 10%;
+    position: relative;
+}
+
+.settings-icon {
+    position: absolute;
+    left: 12%;
+    top: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.settings-icon img { width: 35px; }
+.settings-icon:hover { transform: rotate(90deg); }
+
+.hero-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.hero-image {
+    position: relative;
+    height: 300px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0059BD;
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-content {
+    padding: 30px;
+    text-align: center;
+    color: #555;
+}
+
+/* الأيقونات السفلية */
+.quick-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 30px;
+}
+
+.icon-item {
+    text-align: center;
+    color: var(--main-blue);
+    cursor: pointer;
+}
+
+.icon-item i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--accent-orange);
+}
+
+/* الفوتر */
+.main-footer {
+    background-color: #224a77; /* اللون الأزرق الملكي الخاص بك */
+    color: #ffffff;
+    padding: 50px 8%;
+    direction: rtl;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.footer-logo img {
+    width: 140px;
+    height: auto;
+    margin-top: 90px;
+}
+
+.footer-info {
+    flex: 2;
+}
+
+.footer-info h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-align: center; /* العنوان في المنتصف */
+}
+
+.footer-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* حاوية الأعمدة */
+.footer-columns-wrapper {
+    display: flex;
+    justify-content: space-between; /* توزيع الأعمدة على الأطراف */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* محاذاة العناصر داخل العمود لليمين */
+    gap: 12px;
+}
+
+.contact-row img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.contact-row span {
+    font-size: 14px;
+    white-space: nowrap; /* منع انكسار النص */
+}
+
+/* التجاوب مع الهاتف */
+@media (max-width: 768px) {
+    .footer-container, .footer-columns-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    .contact-row {
+        justify-content: center;
+    }
+}
+
+
+/* تنسيق الصورة في الهيدر */
+.logo img {
+    width: 120px; /* قم بتغيير هذا الرقم لتصغير الصورة أو تكبيرها كما تريد */
+    height: auto;
+    margin: 20; /* للحفاظ على أبعاد الصورة الأصلية دون تشويه */
+}
+
+/* تنسيق الصورة الترحيبية (إذا أردت تصغيرها) */
+.hero-image img {
+    width: 100%; /* تصغير الصورة لتأخذ نصف عرض الحاوية */
+    height: auto;
+}
+
+
+.p-home {
+    font-size: 100%;
+}
+
+
+
+.facilities-container h1 {
+    color: #0059BD;
+    text-align: center;
+}
+
+.facilities-container p {
+    text-align: center;
+    padding: 30px;
+}
+
+
+.facility-item p{
+    text-align: start;
+}
+
+.facility-item {
+    display: flex; /* تفعيل خاصية الاصطفاف الجانبي */
+    align-items: center; /* موازنة النص والصورة عمودياً */
+    gap: 20px; /* المسافة الفاصلة بين النص والصورة */
+    margin-bottom: 20px; /* مسافة بين المرفق الأول والثاني */
+    direction: rtl; /* لضمان أن النص على اليمين والصورة على اليسار */
+}
+
+.facility-text {
+    flex: 1;
+    padding-left: 200px; /* جعل النص يأخذ المساحة المتاحة */
+}
+
+.facility-image {
+    flex: 1; /* جعل حاوية الصورة تأخذ مساحة متساوية */
+}
+
+.facility-image img {
+    width: 100%; /* لتأخذ الصورة عرض الحاوية الخاص بها */
+    max-width: 500px; /* أقصى عرض للصورة كما في تصاميمك */
+    border-radius: 20px; /* زوايا منحنية للصورة لتطابق Moodboard مشروعك */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* ظل خفيف للصورة */
+}
+
+/* لتغيير الترتيب في المرفق الثاني (اختياري: صورة يمين نص يسار) */
+.facility-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+
+
+/* تنسيق الحزم (Cards) */
+.packages-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 5%;
+    background-color: #f4f4f4;
+}
+
+.package-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    width: 320px;
+    text-align: center;
+    border-top: 5px solid #ffffff;
+}
+
+.package-card h2 { color: #000000; font-size: 24px; }
+
+.package-card .price {
+    font-size: 30px;
+    color: #ff0000; /* البرتقالي */
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.package-card .price span { font-size: 14px; color: #666; }
+
+.package-card .features {
+    list-style: none;
+    text-align: right;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.package-card .features li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.btn-orange {
+    background-color: #ff8c00;
+    color: #fff;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
+
+.booking-cta {
+    padding: 20px 20px;
+    text-align: center;
+    direction: rtl;
+}
+
+.cta-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.booking-cta h2 {
+    color: #000;
+    font-size: 36px; /* خط عريض وواضح للعناوين */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.booking-cta p {
+    color: #333;
+    font-size: 22px; /* حجم الخط كما في الصورة */
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 850px;
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .booking-cta h2 {
+        font-size: 28px;
+    }
+    .booking-cta p {
+        font-size: 18px;
+    }
+}
+
+
+/* الحاوية الرئيسية لصفحة نبذة عنا */
+.about-main-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.about-page-title {
+    text-align: center;
+    color: #0059BD;
+    margin-bottom: 30px;
+}
+
+/* الكارد الذي يحتوي كل شيء مرتب عمودياً */
+.about-exclusive-card {
+    display: flex !important;
+    flex-direction: column !important; /* يضمن ترتيب العناصر تحت بعضها */
+    align-items: center !important;
+    width: 100%;
+}
+
+/* الحل النهائي لتصغير الصورة */
+.about-resized-image {
+    width: 900px !important; /* غير هذا الرقم لتتحكم في حجم الصورة بدقة */
+    height: auto !important;
+    max-width: 100% !important;
+    border-radius: 20px !important;
+    margin-bottom: 25px !important;
+    display: block !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+
+/* تنسيق النص المنسق لليسار (RTL) */
+.about-full-text {
+    width: 100%;
+    text-align: right;
+    line-height: 1.9;
+    color: #000000;
+    font-size: 17px;
+}
+
+
+
+.about-points-list {
+    list-style: none;
+    padding: 0;
+}
+
+.about-points-list li {
+    padding-right: 25px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.about-points-list li::before {
+    content: "•";
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: -2px;
+}
+
+.about-vision-footer {
+    font-weight: bold;
+    color: #000000;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+    margin-top: 30px;
+}
+
+
+
+
+.help-page-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.faq-text-section h1 {
+    color: #224a77;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-intro {
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+.faq-questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.faq-block h3 {
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.faq-block p {
+    color: #000000;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+
+
+
+/* الحاوية الخارجية */
+.contact-form-wrapper {
+    background-color: #ffffff; 
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* البوكس الأبيض الصافي بدون حواف (Sharp Edges) */
+.form-white-flat-card {
+    background-color: #ffffff !important;
+    max-width: 850px;
+    width: 100%;
+    height: auto; /* الطول يتحدد حسب المحتوى */
+    padding: 50px;
+    border-radius: 0px !important; /* إزالة الحواف المنحنية تماماً */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* ظل ناعم جداً */
+    text-align: center;
+    direction: rtl;
+}
+
+.form-white-flat-card h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #224a77;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* التنسيق الافتراضي للخط تحت الحقل */
+.input-group input, 
+.input-group textarea {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 12px 5px;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+/* اللون الأحمر عند الخطأ أو الإدخال غير الصحيح */
+.input-group input:invalid:not(:placeholder-shown) {
+    border-bottom-color: #ff0000 !important;
+    color: #ff0000;
+}
+
+
+.submit-btn {
+    background-color: #ff8c00;
+    color: white;
+    padding: 15px 60px;
+    border: none;
+    border-radius: 0px; /* زر بدون حواف ليتناسب مع التصميم */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #e67e00;
+}
+
+.checkbox-group {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+/* خلفية الصفحة الرمادية */
+.booking-page-wrapper {
+    background-color: #F4F4F4; 
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    direction: rtl;
+    font-family: sans-serif;
+}
+
+/* البوكس الأبيض الصافي بدون حواف */
+.booking-flat-card {
+    background-color: #F4F4F4;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 0; 
+    text-align: center;
+}
+
+.form-title {
+    color: #2b78c5; /* لون أزرق كما في الصورة */
+    margin-bottom: 30px;
+}
+
+.form-group-title {
+    font-weight: bold;
+    margin: 25px 0 15px;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.input-row {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+/* تصميم الحقول كخط سفلي فقط */
+.input-row input {
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 5px;
+    outline: none;
+    background: transparent;
+}
+
+/* التنبيه باللون الأحمر عند الخطأ */
+.input-row input:invalid:not(:placeholder-shown) {
+    border-bottom-color: #ff0000;
+    color: #ff0000;
+}
+
+.checkbox-options {
+    text-align: right;
+    margin: 20px 0;
+}
+
+.checkbox-options p {
+    margin-bottom: 10px;
+}
+
+.terms-check {
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+
+.booking-btn:disabled {
+    opacity: 0.5; /* شفافية أقل */
+    cursor: not-allowed; /* شكل الماوس يتغير لعلامة المنع */
+    background-color: #ccc !important; /* لون رمادي باهت */
+}
+
+/* الزر البرتقالي المميز */
+.booking-btn {
+    background-color: #ff8c00;
+    color: white;
+    padding: 15px 80px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-btn:hover {
+    background-color: #e67e00;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+/* تنسيق صفحة الحجز */
+.booking-page-wrapper {
+    background-color: #F4F4F4; /* الخلفية الرمادية كما في الصورة */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.booking-flat-card {
+    background-color: #F4F4F4;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 0; /* حواف حادة */
+}
+
+.form-title-classic {
+    color: #2b78c5; /* اللون الأزرق للعنوان */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group-title {
+    font-weight: bold;
+    margin: 25px 0 15px;
+    text-align: right;
+    font-size: 18px;
+}
+
+.input-row {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    direction: rtl;
+}
+
+.input-row input {
+    flex-grow: 1;
+    border: none;
+    border-bottom: 1px solid #000; /* خط سفلي فقط */
+    padding: 5px;
+    outline: none;
+    background: transparent;
+}
+
+/* تنبيه اللون الأحمر عند الخطأ */
+.input-row input:invalid:not(:placeholder-shown) {
+    border-bottom-color: #ff0000;
+    color: #ff0000;
+}
+
+.checkbox-options {
+    text-align: right;
+    margin: 20px 0;
+    direction: rtl;
+}
+
+.terms-check {
+    text-align: center;
+    margin: 30px 0;
+    font-weight: bold;
+}
+
+/* الزر البرتقالي */
+.btn-orange {
+    background-color: #ff8c00;
+    color: white;
+    padding: 15px 80px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.btn-orange:hover {
+    background-color: #e67e00;
+    transform: scale(1.05);
+}
+
+
+
+
+.form-title-day {
+    color: #2b78c5; /* نفس درجة الأزرق في الصور */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* حالة الزر المعطل */
+.btn-orange:disabled {
+    background-color: #ccc !important;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* تطبيق خط Cairo على الموقع كاملاً */
+* {
+    font-family: 'Cairo', sans-serif !important;
+}
+
+.settings-floating-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #224a77;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 9999;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    width: 320px;
+    padding: 30px;
+    border-radius: 0; /* حواف حادة */
+    text-align: center;
+    direction: rtl;
+}
+
+.modal-title {
+    color: #2b78c5;
+    margin-bottom: 25px;
+}
+
+.font-slider {
+    width: 100%;
+    cursor: pointer;
+    accent-color: #000;
+}
+
+.slider-labels {
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 14px; 
+    margin-top: 10px;
+    color: #666;
+}
+
+.close-red-btn {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== تحسينات متقدمة للتجاوب مع جميع الأجهزة ========== */
+/* أضف من هنا للسطر الأخير */
+
+/* إعدادات أساسية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* تحسين الحاويات */
+.container, 
+.hero-container,
+.packages-container,
+.facilities-container,
+.about-main-container,
+.help-page-container,
+.booking-page-wrapper,
+.contact-form-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* تحسين الصور */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* تحسينات الهيدر للجوال */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px !important;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    .logo img {
+        width: 100px !important;
+    }
+    
+    nav ul {
+        flex-direction: column !important;
+        gap: 15px !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 10px 0 !important;
+    }
+    
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+}
+
+/* تحسين صفحة الحزم */
+@media screen and (max-width: 992px) {
+    .packages-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+        padding: 20px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .packages-container {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .package-card {
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 20px !important;
+    }
+}
+
+/* تحسين صفحة المرافق */
+@media screen and (max-width: 768px) {
+    .facility-item {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 20px !important;
+    }
+    
+    .facility-item:nth-child(even) {
+        flex-direction: column !important;
+    }
+    
+    .facility-text {
+        padding-left: 0 !important;
+    }
+    
+    .facility-image img {
+        max-width: 100% !important;
+    }
+}
+
+/* تحسين صفحة الحجز */
+@media screen and (max-width: 768px) {
+    .booking-flat-card {
+        padding: 20px !important;
+    }
+    
+    .input-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 5px !important;
+    }
+    
+    .input-row label {
+        text-align: right;
+        font-weight: bold;
+    }
+    
+    .input-row input {
+        width: 100% !important;
+    }
+    
+    .booking-btn,
+    .btn-orange {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 18px !important;
+    }
+    
+    .checkbox-options p {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* تحسين صفحة التواصل */
+@media screen and (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .contact-card,
+    .form-section {
+        padding: 20px !important;
+    }
+    
+    .social-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .package-options {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+/* تحسين الفوتر */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 30px !important;
+    }
+    
+    .footer-columns-wrapper {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+    
+    .footer-logo img {
+        margin-top: 0 !important;
+    }
+    
+    .contact-row {
+        justify-content: center !important;
+    }
+}
+
+/* تحسين النماذج */
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .form-title,
+    .form-title-classic,
+    .form-title-day {
+        font-size: 24px !important;
+    }
+    
+    .form-group-title {
+        font-size: 16px !important;
+    }
+    
+    .input-row input {
+        padding: 8px !important;
+    }
+    
+    .terms-check {
+        margin: 20px 0 !important;
+    }
+    
+    .submit-btn {
+        width: 100% !important;
+        padding: 12px !important;
+    }
+}
+
+/* تحسين الأزرار */
+button, 
+.btn, 
+.btn-orange, 
+.booking-btn, 
+.submit-btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    button, 
+    .btn, 
+    .btn-orange, 
+    .booking-btn, 
+    .submit-btn {
+        min-height: 44px; /* تحسين للمس */
+        font-size: 16px !important;
+    }
+}
+
+/* تحسين النصوص */
+p, h1, h2, h3, a, li, label {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* تحسين للشاشات الكبيرة */
+@media screen and (min-width: 1400px) {
+    .container,
+    .hero-container,
+    .packages-container,
+    .facilities-container,
+    .about-main-container,
+    .help-page-container,
+    .booking-page-wrapper,
+    .contact-form-wrapper {
+        max-width: 1400px;
+    }
+}
+
+/* تحسين للطباعة */
+@media print {
+    header, 
+    footer, 
+    nav, 
+    .quick-icons,
+    .booking-btn,
+    .submit-btn,
+    .settings-floating-btn {
+        display: none !important;
+    }
+}
+
+/* تحسينات عامة */
+.flex-responsive {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flex-responsive > * {
+    flex: 1 1 250px;
+}
+
+.grid-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* تحسين الـ Modal للجوال */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90% !important;
+        padding: 20px !important;
+        margin: 20px !important;
+    }
+    
+    .font-slider {
+        width: 100% !important;
+    }
+}
+
+/* تحسين أيقونات التحكم */
+@media screen and (max-width: 768px) {
+    .quick-icons {
+        flex-wrap: wrap !important;
+        gap: 15px !important;
+    }
+    
+    .icon-item {
+        flex: 1 1 80px;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* إخفاء عناصر للجوال */
+@media screen and (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+/* إظهار عناصر للجوال */
+@media screen and (min-width: 769px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+
+/* تحسين التمرير */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+/* تحسين الخريطة للجوال */
+@media screen and (max-width: 768px) {
+    .map-placeholder {
+        height: 200px !important;
+    }
+    
+    .map-placeholder::before {
+        font-size: 12px !important;
+        padding: 5px 10px !important;
+    }
+}
+
+/* ===== تنسيق الفوتر الموحد لجميع الصفحات ===== */
+.main-footer {
+    background-color: #224a77;
+    color: #ffffff;
+    padding: 50px 8%;
+    direction: rtl;
+    font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer-logo img {
+    width: 140px;
+    height: auto;
+    margin-top: 90px;
+}
+
+.footer-info {
+    flex: 2;
+    width: 100%;
+}
+
+.footer-info h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 35px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* حاوية الأعمدة */
+.footer-columns-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 30px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.contact-row img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.contact-row span {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* ===== تحسينات للشاشات الصغيرة ===== */
+@media screen and (max-width: 992px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .footer-columns-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .footer-column {
+        align-items: center;
+    }
+    
+    .contact-row {
+        justify-content: center;
+    }
+    
+    .footer-logo img {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-footer {
+        padding: 40px 5%;
+    }
+    
+    .footer-info h2 {
+        font-size: 22px;
+    }
+    
+    .footer-info p {
+        font-size: 13px;
+        padding: 0 15px;
+    }
+    
+    .contact-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .contact-row span {
+        font-size: 12px;
+        white-space: normal;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-footer {
+        padding: 30px 3%;
+    }
+    
+    .footer-info h2 {
+        font-size: 20px;
+    }
+    
+    .contact-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .contact-row img {
+        width: 16px;
+        height: 16px;
+    }
+}
